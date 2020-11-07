@@ -17,6 +17,7 @@ const CommentDetail = (authorName, date, commentContent, avatar) => {
             <span className="date">
               {date}
             </span>
+
         </div>
         <div className="text">
           {commentContent}
