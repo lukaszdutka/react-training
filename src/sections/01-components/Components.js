@@ -11,12 +11,27 @@ const Components = () => {
   return (
     <div>
       <div> This is <b>Components</b> component</div>
-      <CommentDetail
-        author={randomAuthor()}
-        date={randomDate()}
-        commentContent={randomCommentContent()}
-        avatar={randomAvatar()}
-      />
+      <div className="ui container comments">
+
+        <CommentDetail
+          author={randomAuthor()}
+          date={randomDate()}
+          commentContent={randomCommentContent()}
+          avatar={randomAvatar()}
+        />
+        <CommentDetail
+          author={randomAuthor()}
+          date={randomDate()}
+          commentContent={randomCommentContent()}
+          avatar={randomAvatar()}
+        />
+        <CommentDetail
+          author={randomAuthor()}
+          date={randomDate()}
+          commentContent={randomCommentContent()}
+          avatar={randomAvatar()}
+        />
+      </div>
     </div>
   );
 }

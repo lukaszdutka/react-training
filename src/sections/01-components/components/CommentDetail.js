@@ -1,9 +1,8 @@
 import React from "react";
 
-
 const CommentDetail = ({author, date, commentContent, avatar}) => {
   return (
-    <div className="ui container comments">
+    <div className="comment">
       <a href="/" className="avatar">
         <img alt="avatar" src={avatar}/>
       </a>
@@ -23,4 +22,4 @@ const CommentDetail = ({author, date, commentContent, avatar}) => {
     </div>
   );
 }
-export default CommentDetail
+export default CommentDetail;
