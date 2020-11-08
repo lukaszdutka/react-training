@@ -1,6 +1,8 @@
 import React from "react";
 import faker from "faker";
 import CommentDetail from "./components/CommentDetail";
+import ApprovalCard from "./components/ApprovalCard";
+import './Components.css';
 
 const randomAuthor = () => faker.name.findName();
 const randomDate = () => faker.date.recent().toISOString();
@@ -9,28 +11,33 @@ const randomAvatar = () => faker.image.avatar();
 
 const Components = () => {
   return (
-    <div>
+    <div className={'component'}>
       <div> This is <b>Components</b> component</div>
       <div className="ui container comments">
-
-        <CommentDetail
-          author={randomAuthor()}
-          date={randomDate()}
-          commentContent={randomCommentContent()}
-          avatar={randomAvatar()}
-        />
-        <CommentDetail
-          author={randomAuthor()}
-          date={randomDate()}
-          commentContent={randomCommentContent()}
-          avatar={randomAvatar()}
-        />
-        <CommentDetail
-          author={randomAuthor()}
-          date={randomDate()}
-          commentContent={randomCommentContent()}
-          avatar={randomAvatar()}
-        />
+        <ApprovalCard>
+          <CommentDetail
+            author={randomAuthor()}
+            date={randomDate()}
+            commentContent={randomCommentContent()}
+            avatar={randomAvatar()}
+          />
+        </ApprovalCard>
+        <ApprovalCard>
+          <CommentDetail
+            author={randomAuthor()}
+            date={randomDate()}
+            commentContent={randomCommentContent()}
+            avatar={randomAvatar()}
+          />
+        </ApprovalCard>
+        <ApprovalCard>
+          <CommentDetail
+            author={randomAuthor()}
+            date={randomDate()}
+            commentContent={randomCommentContent()}
+            avatar={randomAvatar()}
+          />
+        </ApprovalCard>
       </div>
     </div>
   );
