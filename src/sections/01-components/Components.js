@@ -2,8 +2,8 @@ import React from "react";
 import faker from "faker";
 import CommentDetail from "./components/CommentDetail";
 
-const randomAuthor = () => faker.internet.username();
-const randomDate = () => faker.date.recent();
+const randomAuthor = () => faker.name.findName();
+const randomDate = () => faker.date.recent().toISOString();
 const randomCommentContent = () => faker.lorem.sentence();
 const randomAvatar = () => faker.image.avatar();
 
