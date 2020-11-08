@@ -31,12 +31,7 @@ const Components = () => {
           />
         </ApprovalCard>
         <ApprovalCard>
-          <CommentDetail
-            author={randomAuthor()}
-            date={randomDate()}
-            commentContent={randomCommentContent()}
-            avatar={randomAvatar()}
-          />
+          Are you sure?
         </ApprovalCard>
       </div>
     </div>
