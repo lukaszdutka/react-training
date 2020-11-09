@@ -3,6 +3,7 @@ import faker from "faker";
 import CommentDetail from "./components/CommentDetail";
 import ApprovalCard from "./components/ApprovalCard";
 import './Components.css';
+import Header from "../components/Header";
 
 const randomAuthor = () => faker.name.findName();
 const randomDate = () => faker.date.recent().toISOString();
@@ -12,7 +13,7 @@ const randomAvatar = () => faker.image.avatar();
 const Components = () => {
   return (
     <div className={'component'}>
-      <div> This is <b>Components</b> component</div>
+      <Header name={"Components"}/>
       <div className="ui container comments">
         <ApprovalCard>
           <CommentDetail
