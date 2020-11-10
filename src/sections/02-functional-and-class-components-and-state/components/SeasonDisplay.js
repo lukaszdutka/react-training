@@ -1,9 +1,26 @@
 import React from 'react';
 
-const SeasonDisplay = (props) => {
-  return (
-    <div>season display: {props.latitude}</div>
-  )
+class SeasonDisplay extends React.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    if (this.props.latitude && !this.props.errorMessage) {
+      return (
+        <div> Latitude: {this.props.latitude}</div>
+      )
+    }
+    if (!this.props.latitude && this.props.errorMessage) {
+      return (
+        <div> Error: {this.props.errorMessage}</div>
+      )
+    }
+    return (
+      <div>Loading</div>
+    )
+  }
 }
 
 export default SeasonDisplay;
