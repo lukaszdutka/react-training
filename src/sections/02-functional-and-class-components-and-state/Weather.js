@@ -8,11 +8,21 @@ class Weather extends React.Component {
     super(props);
     //the only time when we do direct assignment to 'this.state' is constructor first initialization
     this.state = {lat: null, errorMessage: ''};
+  }
 
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
       (position) => this.setState({lat: position.coords.latitude}),
       (err) => this.setState({errorMessage: err.message})
     );
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("Component updated")
+  }
+
+  componentWillUnmount() {
+    console.log("Component unmounted")
   }
 
   render() {
