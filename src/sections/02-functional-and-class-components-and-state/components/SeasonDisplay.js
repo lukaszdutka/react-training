@@ -2,6 +2,12 @@ import React from 'react';
 
 class SeasonDisplay extends React.Component {
 
+  // second also can be state initialization
+  state = {
+    testProp1: null,
+    testProp2: null
+  };
+
   constructor(props) {
     super(props);
   }
