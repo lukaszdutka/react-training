@@ -8,10 +8,6 @@ class SeasonDisplay extends React.Component {
     testProp2: null
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     if (this.props.latitude && !this.props.errorMessage) {
       return (
