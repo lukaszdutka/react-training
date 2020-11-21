@@ -1,3 +1,5 @@
+import './SeasonDisplay.css';
+import Spinner from './Spinner.js';
 import React from 'react';
 
 const seasonConfig = {
@@ -24,10 +26,10 @@ class SeasonDisplay extends React.Component {
       const season = getSeason(this.props.latitude, new Date().getMonth());
       const {text, iconName} = seasonConfig[season];
       return (
-        <div>
-          <i className={`${iconName} icon`}/>
+        <div className={`season-display-container ${season}`}>
+          <i className={`icon-left massive ${iconName} icon`}/>
           <h1>{text}</h1>
-          <i className={`${iconName} icon`}/>
+          <i className={`icon-right massive ${iconName} icon`}/>
         </div>
       )
     }
@@ -38,7 +40,7 @@ class SeasonDisplay extends React.Component {
       )
     }
     return (
-      <div>Loading</div>
+      <Spinner>Please allow geolocation</Spinner>
     )
   }
 }

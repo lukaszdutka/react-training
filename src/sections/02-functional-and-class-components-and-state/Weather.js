@@ -29,7 +29,6 @@ class Weather extends React.Component {
     return (
       <div className={"weather"}>
         <Header name={"Weather"}/>
-        <div>something</div>
         <SeasonDisplay latitude={this.state.lat} errorMessage={this.state.errorMessage}/>
       </div>
     );
