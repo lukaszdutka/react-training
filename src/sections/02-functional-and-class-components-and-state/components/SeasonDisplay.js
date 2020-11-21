@@ -1,6 +1,6 @@
 import './SeasonDisplay.css';
-import Spinner from './Spinner.js';
 import React from 'react';
+import Spinner from "./Spinner";
 
 const seasonConfig = {
   summer: {
@@ -21,7 +21,7 @@ class SeasonDisplay extends React.Component {
     testProp2: null
   };
 
-  render() {
+  renderContent() {
     if (this.props.latitude && !this.props.errorMessage) {
       const season = getSeason(this.props.latitude, new Date().getMonth());
       const {text, iconName} = seasonConfig[season];
@@ -40,8 +40,16 @@ class SeasonDisplay extends React.Component {
       )
     }
     return (
-      <Spinner>Please allow geolocation</Spinner>
+      <Spinner message={'Please allow geolocation'}/>
     )
+  }
+
+  render() {
+    return (
+      <div className="border red">
+        {this.renderContent()}
+      </div>
+    );
   }
 }
 
