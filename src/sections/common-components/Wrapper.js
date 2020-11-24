@@ -1,10 +1,11 @@
 import React from 'react';
-import './style.css';
 
 const Wrapper = props => {
   return (
-    <div className={'wrapper'}>
-      {props.children}
+    <div className={'ui segment wrapper'} style={{margin: '20px', backgroundColor: '#85856c'}}>
+      <div className={'ui container'} style={{marginTop: '10px'}}>
+        {props.children}
+      </div>
     </div>
   )
 }
