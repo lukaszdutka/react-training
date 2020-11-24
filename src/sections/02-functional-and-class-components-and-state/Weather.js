@@ -1,7 +1,7 @@
 import React from "react";
-import "./Weather.css";
 import Header from "../components/Header";
 import SeasonDisplay from "./components/SeasonDisplay";
+import Wrapper from "../components/Wrapper";
 
 class Weather extends React.Component {
   constructor(props) {
@@ -27,10 +27,10 @@ class Weather extends React.Component {
 
   render() {
     return (
-      <div className={"weather"}>
+      <Wrapper>
         <Header name={"Weather"}/>
         <SeasonDisplay latitude={this.state.lat} errorMessage={this.state.errorMessage}/>
-      </div>
+      </Wrapper>
     );
   }
 }
