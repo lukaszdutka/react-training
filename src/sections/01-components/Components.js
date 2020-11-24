@@ -2,8 +2,8 @@ import React from "react";
 import faker from "faker";
 import CommentDetail from "./components/CommentDetail";
 import ApprovalCard from "./components/ApprovalCard";
-import Header from "../components/Header";
-import Wrapper from "../components/Wrapper";
+import Header from "../common-components/Header";
+import Wrapper from "../common-components/Wrapper";
 
 const randomAuthor = () => faker.name.findName();
 const randomDate = () => faker.date.recent().toISOString();

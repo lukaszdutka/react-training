@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
+import Header from "../common-components/Header";
 import SeasonDisplay from "./components/SeasonDisplay";
-import Wrapper from "../components/Wrapper";
+import Wrapper from "../common-components/Wrapper";
 
 class Weather extends React.Component {
   constructor(props) {

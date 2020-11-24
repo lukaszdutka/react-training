@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserInput.css'
-import Wrapper from "../components/Wrapper";
-import Header from "../components/Header";
+import Wrapper from "../common-components/Wrapper";
+import Header from "../common-components/Header";
 
 class UserInput extends React.Component {
 
@@ -9,7 +9,7 @@ class UserInput extends React.Component {
     return (
       <Wrapper>
         <Header name={'UserInput'}/>
-        
+
       </Wrapper>
     );
   }
