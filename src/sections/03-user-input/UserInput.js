@@ -7,11 +7,15 @@ import ImageList from "./components/ImageList";
 
 class UserInput extends React.Component {
 
+  onSearchSubmit = (term) => {
+
+  }
+
   render() {
     return (
       <Wrapper>
         <Header name={'UserInput'}/>
-        <SearchBar/>
+        <SearchBar onSubmit={this.onSearchSubmit}/>
         <ImageList/>
       </Wrapper>
     );
