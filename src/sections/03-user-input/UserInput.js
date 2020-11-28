@@ -25,7 +25,6 @@ class UserInput extends React.Component {
         <Header name={'UserInput'}/>
         <SearchBar onSubmit={this.onSearchSubmit}/>
         <ImageList images={this.state.images}/>
-        Found: {this.state.images.length} elements
       </Wrapper>
     );
   }
