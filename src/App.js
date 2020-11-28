@@ -9,7 +9,7 @@ const App = () => {
     <div>
       <Components/>
       <Weather/>
-      <UserInput/>
+      <Weather/>
     </div>
   );
 }
