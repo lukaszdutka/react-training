@@ -8,8 +8,9 @@ const App = () => {
   return (
     <div>
       <Components/>
-      <Weather/>
       <UserInput/>
+      <UserInput/>
+      {/* this is conflicting change */}
     </div>
   );
 }
