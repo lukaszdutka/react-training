@@ -10,6 +10,13 @@ const App = () => {
       <Components/>
       <Weather/>
       <Weather/>
+      <UserInput/>
+      <UserInput/>
+      {/* this is conflicting change */}
+
+
+      wtf?
+>>>>>>> branch-2
     </div>
   );
 }
