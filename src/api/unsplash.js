@@ -4,6 +4,6 @@ import constants from "../constants";
 export default axios.create({
   baseURL: 'https://api.unsplash.com',
   headers: {
-    Authorization: 'Client-ID ' + constants["client-id"]
+    Authorization: 'Client-ID ' + constants["unsplash"]["client-id"]
   }
 });
