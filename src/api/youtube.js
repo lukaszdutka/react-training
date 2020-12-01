@@ -2,8 +2,11 @@ import axios from 'axios';
 import constants from "../constants";
 
 export default axios.create({
-  baseURL: 'https://api.unsplash.com',
-  headers: {
-    Authorization: 'Client-ID ' + constants["youtube"]["client-id"]
+  baseURL: 'https://www.googleapis.com/youtube/v3',
+  params: {
+    part: 'snippet',
+    maxResults: 5,
+    type: 'video',
+    key: constants["youtube"]["api-key"]
   }
 });

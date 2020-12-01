@@ -2,6 +2,7 @@ import React from 'react';
 import Wrapper from "../common-components/Wrapper";
 import Header from "../common-components/Header";
 import SearchBar from "./SearchBar";
+import youtube from './../../api/youtube.js';
 
 class MyYoutube extends React.Component {
 
@@ -11,7 +12,11 @@ class MyYoutube extends React.Component {
   }
 
   onSearchSubmit = (term) => {
-    console.log(term);
+    youtube.get('/search', {
+      params: {
+        q: term
+      }
+    }).then(r => console.log(r));
   }
 
   render() {
