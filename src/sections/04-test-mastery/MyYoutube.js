@@ -3,6 +3,7 @@ import Wrapper from "../common-components/Wrapper";
 import Header from "../common-components/Header";
 import SearchBar from "./SearchBar";
 import youtube from './../../api/youtube.js';
+import VideoList from "./VideoList";
 
 class MyYoutube extends React.Component {
 
@@ -16,7 +17,9 @@ class MyYoutube extends React.Component {
       params: {
         q: term
       }
-    }).then(r => console.log(r));
+    })
+      //.then(r => console.log(r));
+      .then(r => this.setState({videos: r.data.items}));
   }
 
   render() {
@@ -24,6 +27,7 @@ class MyYoutube extends React.Component {
       <Wrapper>
         <Header name={'My Youtube'}/>
         <SearchBar onSearchSubmit={this.onSearchSubmit}/>
+        <VideoList videos={this.state.videos}/>
       </Wrapper>
     );
   }
