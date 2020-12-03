@@ -4,11 +4,12 @@ import Header from "../common-components/Header";
 import SearchBar from "./SearchBar";
 import youtube from './../../api/youtube.js';
 import VideoList from "./VideoList";
+import VideoDetail from "./VideoDetail";
 
 class MyYoutube extends React.Component {
 
   state = {
-    video: {},
+    selectedVideo: null,
     videos: []
   }
 
@@ -22,12 +23,17 @@ class MyYoutube extends React.Component {
       .then(r => this.setState({videos: r.data.items}));
   }
 
+  onVideoSelected = (video) => {
+    this.setState({selectedVideo: video})
+  }
+
   render() {
     return (
       <Wrapper>
         <Header name={'My Youtube'}/>
         <SearchBar onSearchSubmit={this.onSearchSubmit}/>
-        <VideoList videos={this.state.videos}/>
+        <VideoDetail video={this.state.selectedVideo}/>
+        <VideoList videos={this.state.videos} onVideoSelected={this.onVideoSelected}/>
       </Wrapper>
     );
   }
