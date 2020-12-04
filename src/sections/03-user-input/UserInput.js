@@ -1,6 +1,5 @@
 import React from 'react';
 import unsplash from '../../api/unsplash'
-import './UserInput.css'
 import Wrapper from "../common-components/Wrapper";
 import Header from "../common-components/Header";
 import SearchBar from "./components/SearchBar";
