@@ -8,7 +8,7 @@ import Wrapper from "../common-components/Wrapper";
 const randomAuthor = () => faker.name.findName();
 const randomDate = () => faker.date.recent().toISOString();
 const randomCommentContent = () => faker.lorem.sentence();
-const randomAvatar = () => faker.image.avatar();
+// const randomAvatar = () => faker.image.avatar();
 
 const Components = () => {
   return (
@@ -20,7 +20,7 @@ const Components = () => {
             author={randomAuthor()}
             date={randomDate()}
             commentContent={randomCommentContent()}
-            avatar={randomAvatar()}
+            // avatar={randomAvatar()}
           />
         </ApprovalCard>
         <ApprovalCard>
@@ -28,7 +28,7 @@ const Components = () => {
             author={randomAuthor()}
             date={randomDate()}
             commentContent={randomCommentContent()}
-            avatar={randomAvatar()}
+            // avatar={randomAvatar()}
           />
         </ApprovalCard>
         <ApprovalCard>

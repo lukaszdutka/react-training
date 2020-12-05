@@ -13,14 +13,19 @@ class MyYoutube extends React.Component {
     videos: []
   }
 
+  componentDidMount() {
+    this.onSearchSubmit('buildings');
+  }
+
   onSearchSubmit = (term) => {
     youtube.get('/search', {
       params: {
         q: term
       }
-    })
-      //.then(r => console.log(r));
-      .then(r => this.setState({videos: r.data.items}));
+    }).then(r => this.setState({
+      videos: r.data.items,
+      selectedVideo: r.data.items[0]
+    }));
   }
 
   onVideoSelected = (video) => {
@@ -32,8 +37,16 @@ class MyYoutube extends React.Component {
       <Wrapper>
         <Header name={'My Youtube'}/>
         <SearchBar onSearchSubmit={this.onSearchSubmit}/>
-        <VideoDetail video={this.state.selectedVideo}/>
-        <VideoList videos={this.state.videos} onVideoSelected={this.onVideoSelected}/>
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="eleven wide column">
+              <VideoDetail video={this.state.selectedVideo}/>
+            </div>
+            <div className="five wide column">
+              <VideoList videos={this.state.videos} onVideoSelected={this.onVideoSelected}/>
+            </div>
+          </div>
+        </div>
       </Wrapper>
     );
   }

@@ -18,11 +18,11 @@ class Weather extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("Component updated")
+    // console.log("Component updated")
   }
 
   componentWillUnmount() {
-    console.log("Component unmounted")
+    // console.log("Component unmounted")
   }
 
   render() {
