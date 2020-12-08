@@ -8,14 +8,16 @@ const Accordion = ({items, source}) => {
   }
 
   const renderedItems = items.map((item, index) => {
+    const active = index === activeIndex ? 'active' : '';
+
     return <React.Fragment key={item.title}>
-      <div className="title active"
+      <div className={`title ${active}`}
            onClick={() => onTitleClick(index)}
       >
         <i className="dropdown icon"/>
         {item.title}
       </div>
-      <div className="content active">
+      <div className={`content ${active}`}>
         <p>{item.content}</p>
       </div>
     </React.Fragment>
@@ -26,7 +28,6 @@ const Accordion = ({items, source}) => {
       <div className="ui styled accordion">
         {renderedItems}
       </div>
-      <h1>{activeIndex}</h1>
       <div className="ui segment">source: <a href={source.link}>{source.text}</a></div>
     </div>
   )
