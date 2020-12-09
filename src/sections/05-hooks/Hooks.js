@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "../common-components/Header";
 import Wrapper from "../common-components/Wrapper";
-import Accordion from "./Accordion";
+import Search from "./Search";
 
 const items = [
   {
@@ -28,7 +28,8 @@ const Hooks = () => {
   return (
     <Wrapper>
       <Header name={'Widget/Hooks'}/>
-      <Accordion items={items} source={source}/>
+      {/*<Accordion items={items} source={source}/>*/}
+      <Search/>
     </Wrapper>
   )
 }
