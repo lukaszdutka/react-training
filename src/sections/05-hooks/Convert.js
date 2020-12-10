@@ -16,10 +16,12 @@ const Convert = ({text, language}) => {
 
   useEffect(() => {
     axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
-      key: constants.google_translate.key,
-      q: debouncedText,
-      target: language.value,
-      format: 'text'
+      params: {
+        key: constants.google_translate.key,
+        q: debouncedText,
+        target: language.value,
+        format: 'text'
+      }
     })
       .then(r => setTranslated(r.data.data.translations[0].translatedText))
   }, [language, debouncedText]);
