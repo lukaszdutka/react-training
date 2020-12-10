@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Header from "../common-components/Header";
 import Wrapper from "../common-components/Wrapper";
-import Dropdown from "./Dropdown";
+import DropdownHolder from "./DropdownHolder";
+import Translate from "./Translate";
 
 const items = [
   {
@@ -21,38 +22,16 @@ const source = {
   text: 'r/Stoicism',
   link: 'https://www.reddit.com/r/Stoicism/wiki/faq'
 }
-const options = [
-  {
-    label: 'The Color Red',
-    value: 'red'
-  },
-  {
-    label: 'The Color Green',
-    value: 'green'
-  },
-  {
-    label: 'A Shade of Blue',
-    value: 'blue'
-  }
-]
 
 const Hooks = () => {
-  const [selectedColor, setSelectedColor] = useState(options[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
 
   return (
     <Wrapper>
       <Header name={'Widget/Hooks'}/>
       {/*<Accordion items={items} source={source}/>*/}
       {/*<Search/>*/}
-      <button onClick={() => setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
-      {showDropdown
-        ? <Dropdown options={options}
-                    selected={selectedColor}
-                    onSelectedChange={setSelectedColor}
-        />
-        : null
-      }
+      {/*<DropdownHolder/>*/}
+      <Translate/>
     </Wrapper>
   )
 }
