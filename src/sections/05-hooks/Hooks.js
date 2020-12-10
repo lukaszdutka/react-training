@@ -38,15 +38,21 @@ const options = [
 
 const Hooks = () => {
   const [selectedColor, setSelectedColor] = useState(options[0]);
+  const [showDropdown, setShowDropdown] = useState(true);
 
   return (
     <Wrapper>
       <Header name={'Widget/Hooks'}/>
       {/*<Accordion items={items} source={source}/>*/}
       {/*<Search/>*/}
-      <Dropdown options={options}
-                selected={selectedColor}
-                onSelectedChange={setSelectedColor}/>
+      <button onClick={() => setShowDropdown(!showDropdown)}>Toggle Dropdown</button>
+      {showDropdown
+        ? <Dropdown options={options}
+                    selected={selectedColor}
+                    onSelectedChange={setSelectedColor}
+        />
+        : null
+      }
     </Wrapper>
   )
 }
