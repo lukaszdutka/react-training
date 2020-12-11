@@ -1,11 +1,12 @@
 import React from 'react';
 import Wrapper from "../common-components/Wrapper";
 import Header from "./Header";
-import Router from "./routing/Router";
+import Route from "./routing/Route";
 import Accordion from "./Accordion";
 import Search from "./Search";
 import DropdownHolder from "./DropdownHolder";
 import Translate from "./Translate";
+import Link from "./routing/Link";
 
 const items = [
   {
@@ -31,18 +32,18 @@ const Hooks = () => {
   return (
     <Wrapper>
       <Header/>
-      <Router path="/">
+      <Route path="/">
         <Accordion items={items} source={source}/>
-      </Router>
-      <Router path="/search">
+      </Route>
+      <Route path="/search">
         <Search/>
-      </Router>
-      <Router path="/dropdown">
+      </Route>
+      <Route path="/dropdown">
         <DropdownHolder/>
-      </Router>
-      <Router path="/translate">
+      </Route>
+      <Route path="/translate">
         <Translate/>
-      </Router>
+      </Route>
     </Wrapper>
   )
 }
