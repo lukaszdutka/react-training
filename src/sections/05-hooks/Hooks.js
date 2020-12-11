@@ -1,6 +1,9 @@
 import React from 'react';
-import Header from "../common-components/Header";
 import Wrapper from "../common-components/Wrapper";
+import Header from "./Header";
+import Router from "./routing/Router";
+import Accordion from "./Accordion";
+import Search from "./Search";
 import DropdownHolder from "./DropdownHolder";
 import Translate from "./Translate";
 
@@ -27,11 +30,19 @@ const Hooks = () => {
 
   return (
     <Wrapper>
-      <Header name={'Widget/Hooks'}/>
-      {/*<Accordion items={items} source={source}/>*/}
-      {/*<Search/>*/}
-      {/*<DropdownHolder/>*/}
-      <Translate/>
+      <Header/>
+      <Router path="/">
+        <Accordion items={items} source={source}/>
+      </Router>
+      <Router path="/search">
+        <Search/>
+      </Router>
+      <Router path="/dropdown">
+        <DropdownHolder/>
+      </Router>
+      <Router path="/translate">
+        <Translate/>
+      </Router>
     </Wrapper>
   )
 }

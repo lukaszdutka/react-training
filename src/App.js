@@ -10,10 +10,10 @@ const App = () => {
   return (
     <div>
       <Hooks/>
-      <MyYoutube/>
-      <UserInput/>
-      <Weather/>
-      <Components/>
+      {/*<MyYoutube/>*/}
+      {/*<UserInput/>*/}
+      {/*<Weather/>*/}
+      {/*<Components/>*/}
     </div>
   );
 }
