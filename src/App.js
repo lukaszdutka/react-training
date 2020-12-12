@@ -5,11 +5,13 @@ import Weather from './sections/02-functional-and-class-components-and-state/Wea
 import UserInput from './sections/03-user-input/UserInput.js'
 import MyYoutube from "./sections/04-test-mastery/MyYoutube.js";
 import Hooks from "./sections/05-hooks/Hooks";
+import MyYoutubeHooks from "./sections/06-test-mastery-hooks/MyYoutubeHooks";
 
 const App = () => {
   return (
     <div>
-      <Hooks/>
+      <MyYoutubeHooks/>
+      {/*<Hooks/>*/}
       {/*<MyYoutube/>*/}
       {/*<UserInput/>*/}
       {/*<Weather/>*/}
